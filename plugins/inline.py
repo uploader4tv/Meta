@@ -17,7 +17,7 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to subscribe my channel to use the bot',
+                           switch_pm_text='CLICK HERE (literally) to access the bot',
                            switch_pm_parameter="subscribe")
         return
 
@@ -77,7 +77,7 @@ async def answer(bot, query):
                            switch_pm_text=str(e)[:63],
                            switch_pm_parameter="error")
     else:
-        switch_pm_text = f'{emoji.CROSS_MARK} No results'
+        switch_pm_text = f'{emoji.CROSS_MARK} Try removing/adding punctuation marks'
         if string:
             switch_pm_text += f' for "{string}"'
 
