@@ -74,7 +74,7 @@ async def start(client, message):
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay"]:
-        buttons = [[
+        buttons = [
            [
             InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Other Bots', url='https://t.me/tvseriesg')
